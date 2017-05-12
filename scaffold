@@ -1,0 +1,10 @@
+scaffold user username password
+scaffold owner first_name second_name phone_number email area_name town district country user:references
+scaffold location area_name town district country lat:float long:float radius:float
+scaffold payment_plan price:float months_to_pay:integer amount_per_month:float 
+scaffold site owner:references location:references payment_plan:references
+scaffold property_features 
+scaffold property owner:references location:references property_type property_features:references
+scaffold property_photo photo property:references
+scaffold property_for_sale property:references payment_plan:references
+scaffold propterty_for_rental property:reference rent:float security_fee:float
