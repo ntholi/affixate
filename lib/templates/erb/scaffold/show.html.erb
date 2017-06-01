@@ -1,8 +1,8 @@
-<section class="row">
+<section>
 	<% attributes.reject(&:password_digest?).each do |attribute| -%>
-	<p>
-	  <div class="col-sm-3"><%= attribute.human_name %>:</div>
-	  <div class="col-sm-9"><%%= @<%= singular_table_name %>.<%= attribute.name %> %></div>
+	<p class="row">
+		<div class="col-sm-2"><%= attribute.human_name %>:</div>
+		<div class="col-sm-10"><%%= @<%= singular_table_name %>.<%= attribute.name %> %></div>
 	</p>
 
 	<% end -%>
